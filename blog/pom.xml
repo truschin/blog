@@ -55,16 +55,35 @@
         		</configuration>
       		</plugin>
       		<plugin>
-    			<groupId>org.codehaus.mojo</groupId>
-    			<artifactId>exec-maven-plugin</artifactId>
-    			<version>1.2.1</version>
-    			<configuration>
-        			<mainClass>blog.BlogService</mainClass>
-        			<arguments>
-           				<argument>server</argument>
-        			</arguments>
-    			</configuration>
-			</plugin>
+        		<groupId>org.codehaus.mojo</groupId>
+        		<artifactId>appassembler-maven-plugin</artifactId>
+        		<version>1.9</version>
+        		<executions>
+          			<execution>
+            			<id>generate-jsw-scripts</id>
+            			<phase>package</phase>
+            			<goals>
+              				<goal>generate-daemons</goal>
+            			</goals>
+            			<configuration>
+              				<repositoryLayout>flat</repositoryLayout>
+              				<includeConfigurationDirectoryInClasspath>true</includeConfigurationDirectoryInClasspath>
+              				<daemons>
+                				<daemon>
+                  					<id>BlogService</id>
+                  					<mainClass>blog.BlogService</mainClass>
+                  					<commandLineArguments>
+                    					<commandLineArgument>start</commandLineArgument>
+                  					</commandLineArguments>
+                  					<platforms>
+                    					<platform>jsw</platform>
+                  					</platforms>
+                					</daemon>
+              				</daemons>
+            			</configuration>
+          			</execution>
+        		</executions>
+      		</plugin>
         </plugins>
     </build>
 </project>
