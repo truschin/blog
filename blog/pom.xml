@@ -54,6 +54,17 @@
           			</descriptorRefs>
         		</configuration>
       		</plugin>
+      		<plugin>
+    			<groupId>org.codehaus.mojo</groupId>
+    			<artifactId>exec-maven-plugin</artifactId>
+    			<version>1.2.1</version>
+    			<configuration>
+        			<mainClass>blog.BlogService</mainClass>
+        			<arguments>
+           				<argument>server</argument>
+        			</arguments>
+    			</configuration>
+			</plugin>
         </plugins>
     </build>
 </project>
