@@ -78,7 +78,17 @@
                   					<platforms>
                     					<platform>jsw</platform>
                   					</platforms>
-                					</daemon>
+                  					<programs>
+            <program>
+              <mainClass>blog.BlogService</mainClass>
+              <id>BlogService</id>
+              <!-- Only generate unix shell script for this application -->
+              <platforms>
+                <platform>unix</platform>
+              </platforms>
+            </program>
+          </programs>
+                				</daemon>
               				</daemons>
             			</configuration>
           			</execution>
