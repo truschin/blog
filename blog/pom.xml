@@ -62,6 +62,15 @@
           <repositoryLayout>flat</repositoryLayout>
           <includeConfigurationDirectoryInClasspath>true</includeConfigurationDirectoryInClasspath>
           <target>${project.build.directory}</target>
+          <programs>
+            <program>
+              <platforms>
+                <platform>unix</platform>
+              </platforms>
+              <mainClass>com.mycompany.app.App</mainClass>
+              <id>app</id>
+            </program>
+          </programs>
           <daemons>
             <daemon>
               <id>app1</id>
