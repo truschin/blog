@@ -67,7 +67,7 @@
               <platforms>
                 <platform>unix</platform>
               </platforms>
-              <mainClass>com.mycompany.app.App</mainClass>
+              <mainClass>blog.BlogService</mainClass>
               <id>app</id>
             </program>
           </programs>
